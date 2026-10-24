@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Methods Example</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: black;
+        }
+
+        h2 {
+            margin: 0;
+            padding: 50px 0 20px;
+            border-bottom: 1px solid gray;
+        }
+
+        #message {
+            padding: 20px 0;
+            margin: 0;
+            border-bottom: 1px solid gray;
+        }
+
+        .highlight {
+            background-color: yellow;
+            color: red;
+            font-weight: bold;
+        }
+
+        .buttons {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        button {
+            padding: 10px 16px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>jQuery Methods Example</h2>
+
+    <p id="message">Welcome to the jQuery class!</p>
+
+    <div class="buttons">
+        <button id="add">Add Class</button>
+        <button id="remove">Remove Class</button>
+        <button id="toggle">Toggle Class</button>
+        <button id="text">Change Text</button>
+        <button id="html">Change HTML</button>
+        <button id="css">Change CSS</button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+           
+            $("#add").click(function () {
+                $("#message").addClass("highlight");
+            });
+
+            
+            $("#remove").click(function () {
+                $("#message").removeClass("highlight");
+            });
+
+           
+            $("#toggle").click(function () {
+                $("#message").toggleClass("highlight");
+            });
+
+           
+            $("#text").click(function () {
+                $("#message").text("Text changed using jQuery!");
+            });
+
+           
+            $("#html").click(function () {
+                $("#message").html(
+                    "<b>Welcome!</b> <i>HTML changed successfully.</i>"
+                );
+            });
+
+           
+            $("#css").click(function () {
+                $("#message").css({
+                    "color": "blue",
+                    "background-color": "lightgreen",
+                    "font-size": "22px",
+                    "font-weight": "bold"
+                });
+            });
+
+        });
+    </script>
+
+</body>
+</html>
